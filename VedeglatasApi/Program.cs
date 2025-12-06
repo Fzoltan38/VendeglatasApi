@@ -11,6 +11,20 @@ namespace VedeglatasApi
 
             builder.Services.AddDbContext<VendeglatasContext>();
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+            builder.Services.AddCors(options =>
+            {
+
+                options.AddPolicy(MyAllowSpecificOrigins,
+                                      policy =>
+                                      {
+                                          policy.WithOrigins("*")
+                                                                .AllowAnyHeader()
+                                                                .AllowAnyMethod();
+                                      });
+            });
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -19,6 +33,8 @@ namespace VedeglatasApi
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

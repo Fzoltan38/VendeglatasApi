@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VedeglatasApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4e5642929e9d6cb51372a36dd9769acdbb56ce1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+782e96b375ec6037932540154ae0c72696270fb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("VedeglatasApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VedeglatasApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
