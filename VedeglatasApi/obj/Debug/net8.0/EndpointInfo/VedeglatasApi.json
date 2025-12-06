@@ -5,6 +5,47 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Furdok": {
+      "post": {
+        "tags": [
+          "Furdok"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddStrandDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddStrandDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddStrandDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Furdok"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Varosok": {
       "post": {
         "tags": [
@@ -34,11 +75,44 @@
             "description": "OK"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "Varosok"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
   "components": {
     "schemas": {
+      "AddStrandDto": {
+        "type": "object",
+        "properties": {
+          "nev": {
+            "type": "string",
+            "nullable": true
+          },
+          "cim": {
+            "type": "string",
+            "nullable": true
+          },
+          "irnyitoszam": {
+            "type": "string",
+            "nullable": true
+          },
+          "varosid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AddVarosDto": {
         "type": "object",
         "properties": {

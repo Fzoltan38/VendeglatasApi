@@ -8,41 +8,42 @@ namespace VedeglatasApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VarosokController : ControllerBase
+    public class FurdokController : ControllerBase
     {
         private readonly VendeglatasContext _context;
-        public VarosokController(VendeglatasContext context)
+        public FurdokController(VendeglatasContext context)
         {
             _context = context;
         }
         ResponseDto responseDto = new ResponseDto();
 
         [HttpPost]
-        public async Task<ActionResult> AddNewCity(AddVarosDto addVarosDto)
+        public async Task<ActionResult> AddNewStrand(AddStrandDto addStrandDto)
         {
             try
             {
-               
-                var varos = new Varosok
+
+                var requestParam = new Furdok
                 {
-                    Nev = addVarosDto.Nev,
-                    Tipus = addVarosDto.Tipus,
-                    Lakosokszama = addVarosDto.Lakosokszama
+                  Nev=addStrandDto.Nev,
+                  Cim=addStrandDto.Cim,
+                  Irnyitoszam = addStrandDto.Irnyitoszam,
+                  Varosid=addStrandDto.Varosid
                 };
 
-                if (varos != null)
+                if (requestParam != null)
                 {
-                    await _context.Varosoks.AddAsync(varos);
+                    await _context.Furdoks.AddAsync(requestParam);
                     await _context.SaveChangesAsync();
 
                     responseDto.Message = "Sikeres hozzáadás.";
-                    responseDto.Result = varos;
+                    responseDto.Result = requestParam;
 
                     return StatusCode(201, responseDto);
                 }
 
                 responseDto.Message = "Sikeretlen hozzáadás.";
-                responseDto.Result = varos;
+                responseDto.Result = requestParam;
 
                 return StatusCode(400, responseDto);
             }
@@ -53,25 +54,25 @@ namespace VedeglatasApi.Controllers
 
                 return StatusCode(400, responseDto);
             }
-            
-        }
 
+        }
+        
         [HttpGet]
         public async Task<ActionResult> GetAllVaros()
         {
             try
             {
-                var varosok = await _context.Varosoks.ToListAsync();
+                var requestParam = await _context.Furdoks.ToListAsync();
 
-                if (varosok.Count != 0)
+                if (requestParam.Count != 0)
                 {
                     responseDto.Message = "Sikeres lekérdezés.";
-                    responseDto.Result = varosok;
+                    responseDto.Result = requestParam;
                     return Ok(responseDto);
                 }
 
                 responseDto.Message = "Nincs adat.";
-                responseDto.Result = varosok;
+                responseDto.Result = requestParam;
                 return NotFound(responseDto);
             }
             catch (Exception ex)

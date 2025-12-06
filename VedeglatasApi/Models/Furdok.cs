@@ -13,7 +13,7 @@ public partial class Furdok
 
     public string? Irnyitoszam { get; set; }
 
-    public DateTime? Regtime { get; set; }
+    public DateTime? Regtime { get; set; } = DateTime.Now;
 
     public int? Varosid { get; set; }
 

@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "VedeglatasApi.Controllers.FurdokController",
+    "Method": "AddNewStrand",
+    "RelativePath": "api/Furdok",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addStrandDto",
+        "Type": "VedeglatasApi.Models.Dtos.AddStrandDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VedeglatasApi.Controllers.FurdokController",
+    "Method": "GetAllVaros",
+    "RelativePath": "api/Furdok",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VedeglatasApi.Controllers.VarosokController",
     "Method": "AddNewCity",
     "RelativePath": "api/Varosok",
@@ -13,6 +39,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VedeglatasApi.Controllers.VarosokController",
+    "Method": "GetAllVaros",
+    "RelativePath": "api/Varosok",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
