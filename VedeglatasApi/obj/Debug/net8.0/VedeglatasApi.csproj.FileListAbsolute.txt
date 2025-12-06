@@ -128,3 +128,4 @@ C:\Users\zoli\Desktop\2025_2026\C#Oktav\Tan1\WebApi\VedeglatasApi\VedeglatasApi\
 C:\Users\zoli\Desktop\2025_2026\C#Oktav\Tan1\WebApi\VedeglatasApi\VedeglatasApi\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\zoli\Desktop\2025_2026\C#Oktav\Tan1\WebApi\VedeglatasApi\VedeglatasApi\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
 C:\Users\zoli\Desktop\2025_2026\C#Oktav\Tan1\WebApi\VedeglatasApi\VedeglatasApi\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\zoli\Desktop\2025_2026\C#Oktav\Tan1\WebApi\VedeglatasApi\VedeglatasApi\obj\Debug\net8.0\VedeglatasApi.sourcelink.json

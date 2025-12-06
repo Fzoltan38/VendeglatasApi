@@ -13,7 +13,7 @@ public partial class Varosok
 
     public int? Lakosokszama { get; set; }
 
-    public DateTime? Regtime { get; set; }
+    public DateTime? Regtime { get; set; } = DateTime.Now;
 
     public virtual ICollection<Furdok> Furdoks { get; set; } = new List<Furdok>();
 }

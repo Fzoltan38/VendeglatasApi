@@ -1,23 +1,18 @@
 [
   {
-    "ContainingType": "VedeglatasApi.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "VedeglatasApi.Controllers.VarosokController",
+    "Method": "AddNewCity",
+    "RelativePath": "api/Varosok",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[VedeglatasApi.WeatherForecast, VedeglatasApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "addVarosDto",
+        "Type": "VedeglatasApi.Models.Dtos.AddVarosDto",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
   }
 ]

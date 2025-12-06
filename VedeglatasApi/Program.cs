@@ -1,4 +1,6 @@
 
+using VedeglatasApi.Models;
+
 namespace VedeglatasApi
 {
     public class Program
@@ -6,6 +8,8 @@ namespace VedeglatasApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<VendeglatasContext>();
 
             // Add services to the container.
 
